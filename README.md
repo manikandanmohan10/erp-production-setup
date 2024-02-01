@@ -1,4 +1,4 @@
-# erp-production-setup
+# ERP production setup
 **Enter to your system via ssh with root user**
 ## Step 1
 ```
