@@ -113,3 +113,36 @@ sudo chmod o+x /home/$USER
 ```
 bench restart
 ```
+# ssl generator (certbort)
+## Step 1
+Install snapd if not installed.
+```
+sudo apt install snapd
+```
+## Step 2
+Update snapd core
+```
+sudo snap install core
+sudo snap refresh core
+```
+## Step 3
+If you have old certbot installed, uninstall it.
+```
+sudo apt-get remove certbot
+```
+## Step 4
+Install classic certbot
+```
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+```
+## Step 5
+Automatic ssl installation
+```
+sudo certbot --nginx
+```
+## Step 6
+Optional, if you want to test "renew" without saving any certificates to disk
+```
+sudo certbot renew --dry-run
+```
