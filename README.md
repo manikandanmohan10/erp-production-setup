@@ -51,9 +51,65 @@ run mysql_secure_installation
 ```
 mysql -u root -p
 ```
+Run this
 ```
 USE mysql; 
 UPDATE user SET plugin=' ' WHERE user ='root';  (or) ALTER USER 'root'@'{host}' IDENTIFIED WITH '';
 FLUSH PRIVILEGES;
 exit
+```
+## Step 10
+Use your user {USERNAME} after reboot (do not continue as root)
+```
+sudo npm install -g yarn
+```
+## Step 11
+To check the versions
+```
+node -v && npm -v && python3 -V && pip3 -V && yarn -v 
+```
+## Step 12
+```
+pip3 install frappe-bench
+```
+(or)
+```
+sudo pip3 install frappe-bench
+```
+## Step 13
+```
+bench init --frappe-branch version-14 frappe-bench
+```
+## Step 14
+```
+cd frappe-bench
+```
+```
+bench new-site {site-name}
+```
+## Step 15
+Get erpnext
+```
+bench get-app --branch version-14 erpnext
+```
+## Step 16
+Installing erpnext
+```
+bench --site mysite install-app erpnext
+```
+## Step 17 (Production Mode setup)
+```
+sudo bench setup production $USER
+bench restart
+```
+If bench restart is not worked run the following command again with all Questions Yes
+```
+sudo bench setup production $USER
+```
+if js and css file is not loading on login window run the following command
+```
+sudo chmod o+x /home/$USER
+```
+```
+bench restart
 ```
