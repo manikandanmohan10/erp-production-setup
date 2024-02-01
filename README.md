@@ -113,7 +113,7 @@ sudo chmod o+x /home/$USER
 ```
 bench restart
 ```
-# ssl generator (certbort)
+# SSL generator (certbort)
 ## Step 1
 Install snapd if not installed.
 ```
