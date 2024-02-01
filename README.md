@@ -34,3 +34,26 @@ collation-server = utf8mb4_unicode_ci
 [mysql]
 default-character-set = utf8mb4
 ```
+## Step 7
+```
+service mysql restart
+```
+## Step 8
+```
+run mysql_secure_installation
+```
+- Set root password? [Y/n] y
+- Remove anonymous users? [Y/n] y
+- Disallow root login remotely? [Y/n] n
+- Remove test database and access to it? [Y/n] y
+- Reload privilege tables now? [Y/n] y
+## Step 9
+```
+mysql -u root -p
+```
+```
+USE mysql; 
+UPDATE user SET plugin=' ' WHERE user ='root';  (or) ALTER USER 'root'@'{host}' IDENTIFIED WITH '';
+FLUSH PRIVILEGES;
+exit
+```
