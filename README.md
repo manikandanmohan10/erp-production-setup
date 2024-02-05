@@ -54,9 +54,19 @@ mysql -u root -p
 ```
 Run this
 ```
-USE mysql; 
-UPDATE user SET plugin=' ' WHERE user ='root';  (or) ALTER USER 'root'@'{host}' IDENTIFIED WITH '';
+USE mysql;
+```
+```
+UPDATE user SET plugin=' ' WHERE user ='root';
+```
+(or) 
+```
+ALTER USER 'root'@'{host}' IDENTIFIED WITH '';
+```
+```
 FLUSH PRIVILEGES;
+```
+```
 exit
 ```
 ## Step 10
