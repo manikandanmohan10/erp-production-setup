@@ -10,7 +10,7 @@ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 ```
 ## Step 3
 ```
-apt install -y nodejs mariadb-server redis-server python3-pip nginx python3-testresources
+apt install -y nodejs mariadb-server redis-server python3-pip nginx python3-testresources python3-venv
 ```
 ## Step 4 (If you're using instance you can create a new user)
 ```
