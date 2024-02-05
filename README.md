@@ -21,10 +21,11 @@ adduser {USERNAME}
 usermod  -aG sudo {USERNAME}
 ```
 ## Step 6
+Exit from root user and log in to the new user which we created
 ```
-nano /etc/mysql/my.cnf
+sudo nano /etc/mysql/my.cnf
 ```
-Add these lines
+Add these lines at last
 ```
 [mysqld]
 character-set-client-handshake = FALSE 
@@ -36,11 +37,11 @@ default-character-set = utf8mb4
 ```
 ## Step 7
 ```
-service mysql restart
+sudo service mysql restart
 ```
 ## Step 8
 ```
-run mysql_secure_installation
+sudo mysql_secure_installation
 ```
 - Set root password? [Y/n] y
 - Remove anonymous users? [Y/n] y
