@@ -55,19 +55,13 @@ mysql -u root -p
 Run this
 ```
 USE mysql;
-```
-```
-UPDATE user SET plugin=' ' WHERE user ='root';
-```
-(or) 
-```
-ALTER USER 'root'@'{host}' IDENTIFIED WITH '';
-```
-```
+ALTER USER 'root'@'localhost' IDENTIFIED WITH '{your_password}';
 FLUSH PRIVILEGES;
 ```
 ```
-exit
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY '{your_password}' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+```
 ```
 ## Step 10
 Use your user {USERNAME} after reboot (do not continue as root)
