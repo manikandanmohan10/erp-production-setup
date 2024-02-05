@@ -62,7 +62,7 @@ FLUSH PRIVILEGES;
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY '{your_password}' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 ```
-```
+
 ## Step 10
 Use your user {USERNAME} after reboot (do not continue as root)
 ```
